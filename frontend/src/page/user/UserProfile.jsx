@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getUserProfile, getCurrentFlight, getPreviousFlights } from '../api/UserProfileApi';
+import { getUserProfile, getCurrentFlight, getPreviousFlights } from '../../api/UserProfileApi';
 
 const UserProfile = () => {
   const userId = 1;

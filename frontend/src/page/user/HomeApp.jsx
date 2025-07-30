@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { searchFlights, getAirports } from '../api/flightApi';
+import { searchFlights, getAirports } from '../../api/flightApi';
 import { useSetRecoilState } from 'recoil';
-import { passengerCountAtom, classAtom } from '../store/bookingAtom';
+import { passengerCountAtom, classAtom } from '../../store/bookingAtom';
 
 
 const HomeApp = () => {

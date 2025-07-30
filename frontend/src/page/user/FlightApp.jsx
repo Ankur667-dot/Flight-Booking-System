@@ -58,7 +58,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from 'recoil';
-import { selectedFlightAtom } from '../store/bookingAtom';
+import { selectedFlightAtom } from '../../store/bookingAtom';
 
 const FlightApp = () => {
   const location = useLocation();

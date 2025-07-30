@@ -1,6 +1,6 @@
 import React from 'react';
 import './MyBooking.css';
-import Barcode from '../component/BarCode';
+import Barcode from '../../component/BarCode';
 const MyBooking = () => {
 
   const ticket = {

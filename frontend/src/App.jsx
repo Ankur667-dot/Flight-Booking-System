@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
-import HomeApp from './page/HomeApp';
-import FlightApp from './page/FlightApp';
-import BookingPage from './page/BookingPage';
-import MyBooking from './page/MyBooking';
-import UserProfile from './page/UserProfile';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { RecoilRoot } from 'recoil';
+import HomeApp from '../src/page/user/HomeApp';
+import FlightApp from '../src/page/user/FlightApp';
+import BookingApp from '../src/page/user/BookingApp';
+import MyBooking from '../src/page/user/MyBooking';
+import UserProfile from '../src/page/user/UserProfile';
 
 function App() {
   return (
@@ -17,8 +17,8 @@ function App() {
     //     </Routes>
     //   </BrowserRouter>
     // </RecoilRoot>
-    <UserProfile/>
-    // <MyBooking />
+    // <UserProfile/>
+    <MyBooking />
   );
 }
 
