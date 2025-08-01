@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { searchFlights, getAirports } from '../../api/flightApi';
 import { useSetRecoilState } from 'recoil';
 import { passengerCountAtom, classAtom } from '../../store/bookingAtom';
+import './HomeApp.css'
 
 
 const HomeApp = () => {
@@ -111,7 +112,7 @@ const handleSearch = async () => {
   // const handleSearch = () => {
   //   // search API
   //   console.log({
-      // tripType,
+  //     tripType,
   //     from,
   //     to,
   //     departureDate,
@@ -123,10 +124,10 @@ const handleSearch = async () => {
 
   return (
     <div className="homepage">
-      <h2>Book Your Flight</h2>
+      <h2 className="form-title">Book Your Flight</h2>
 
-      <div>
-        <label>
+      <div className="input-group trip-type-selector">
+        <label className="radio-label">
           <input
             type="radio"
             name="tripType"
@@ -134,9 +135,10 @@ const handleSearch = async () => {
             checked={tripType === 'oneway'}
             onChange={() => setTripType('oneway')}
           />
+             <span className="radio-custom"></span>
           One Way
         </label>
-        <label>
+        <label className="radio-label">
           <input
             type="radio"
             name="tripType"
@@ -144,11 +146,13 @@ const handleSearch = async () => {
             checked={tripType === 'roundtrip'}
             onChange={() => setTripType('roundtrip')}
           />
+
+        <span className="radio-custom"></span> 
           Round Trip
         </label>
       </div>
 
-      <div>
+      <div className="input-group location-inputs">
         <input
           type="text"
           placeholder="From (e.g., Delhi)"
@@ -163,7 +167,7 @@ const handleSearch = async () => {
         />
       </div>
 
-      <div>
+      <div className="input-group date-inputs">
         <label>
           Departure:
           <input
@@ -185,7 +189,7 @@ const handleSearch = async () => {
         )}
       </div>
 
-      <div>
+      <div className="input-group passenger-class-inputs">
         <label>
           Travellers:
           <input
@@ -196,7 +200,7 @@ const handleSearch = async () => {
           />
         </label>
 
-        {/* <label>
+        <label>
           Class:
           <select
             value={travelClass}
@@ -206,10 +210,10 @@ const handleSearch = async () => {
             <option>Business</option>
             <option>First</option>
           </select>
-        </label> */}
+        </label>
       </div>
 
-      <button onClick={handleSearch}>Search Flights</button>
+      <button className="search-button" onClick={handleSearch}>Search Flights</button>
     </div>
   );
 };
@@ -217,4 +221,5 @@ const handleSearch = async () => {
 
 
 export default HomeApp;
+
 
