@@ -1,24 +1,24 @@
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { RecoilRoot } from 'recoil';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import HomeApp from '../src/page/user/HomeApp';
 import FlightApp from '../src/page/user/FlightApp';
 import BookingApp from '../src/page/user/BookingApp';
-import MyBooking from '../src/page/user/MyBooking';
-import UserProfile from '../src/page/user/UserProfile';
+// import MyBooking from '../src/page/user/MyBooking';
+// import UserProfile from '../src/page/user/UserProfile';
 
 function App() {
   return (
-    // <RecoilRoot>
-    //   <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<HomeApp />} />
-    //       <Route path="/flights" element={<FlightApp />} />
-    //       <Route path="/booking" element={<BookingPage />} />
-    //     </Routes>
-    //   </BrowserRouter>
-    // </RecoilRoot>
+    <RecoilRoot>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomeApp />} />
+          <Route path="/flights" element={<FlightApp />} />
+          <Route path="/booking" element={<BookingApp />} />
+        </Routes>
+      </BrowserRouter>
+    </RecoilRoot>
     // <UserProfile/>
-    <MyBooking />
+    // <MyBooking />
   );
 }
 
